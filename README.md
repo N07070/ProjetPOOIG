@@ -4,7 +4,7 @@
 
 ## Sujet
 
-Le sujet est disponible [ici](https://gist.github.com/totocptbgn/17de0c4311278895222dcefa145b34ce#file-sujetprojetpooig-md).
+Le sujet est disponible [ici](https://gist.github.com/totocptbgn/17de0c4311278895222dcefa145b34ce).
 
 ## Membres
 
