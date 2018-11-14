@@ -1,8 +1,16 @@
 public class Domino extends Jeu {
-    Joueur [] participant;
-
     @Override
     public void lancerPartie(){
       
+    }
+
+    @Override
+    public void afficher() {
+
+    }
+
+    @Override
+    public void joueUnTour(Joueur j) {
+
     }
 }

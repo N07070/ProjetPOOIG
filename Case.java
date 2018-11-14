@@ -5,7 +5,7 @@ public class Case {
 
   public Case(){
     this.remplie = false;
-    this.valeur = null;
+    this.valeur = -1;
     this.piece = null;
   }
 }

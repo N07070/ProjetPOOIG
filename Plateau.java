@@ -11,11 +11,11 @@ public class Plateau {
   }
 
   public Plateau(int hauteur){
-    this = new Plateau(hauteur, hauteur);
+    this(hauteur, hauteur);
   }
 
   public Plateau(){
-    this = new Plateau(10);
+    this(10);
   }
 
   public Case getCase(int i, int j){
