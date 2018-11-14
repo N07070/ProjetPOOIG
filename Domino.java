@@ -1,3 +1,3 @@
-public class Domino implements Jeu {
+public class Domino extends Jeu {
 
 }

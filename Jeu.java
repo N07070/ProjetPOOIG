@@ -1,3 +1,3 @@
-public interface Jeu {
-  
+public abstract class Jeu {
+
 }

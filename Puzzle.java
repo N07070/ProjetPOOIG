@@ -1,3 +1,3 @@
-public class Puzzle implements Jeu {
-  
+public class Puzzle extends Jeu {
+
 }
