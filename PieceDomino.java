@@ -1,6 +1,5 @@
 public class PieceDomino {
-  Joueur proprietaire;
-  Case [] case;
-  int [] valeur;
-
+  private Joueur proprietaire;
+  private Case [] cases;
+  private int [] valeur;
 }
