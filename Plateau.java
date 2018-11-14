@@ -1,5 +1,5 @@
 public class Plateau {
-  Case [][] plateau;
+  private Case [][] plateau;
 
   public Plateau(int hauteur, int longueur){
     this.plateau = new Case[hauteur - 1][longueur - 1];
@@ -19,7 +19,7 @@ public class Plateau {
   }
 
   public Case getCase(int i, int j){
-    
+    return plateau[i][j];
   }
 
 }

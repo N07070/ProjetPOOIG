@@ -1,5 +1,5 @@
 public abstract class Jeu {
-    Plateau plateau;
+    private Plateau plateau;
 
     public abstract void lancerPartie();
     public abstract void afficher();

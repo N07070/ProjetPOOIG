@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
 public class Joueur  {
-    String nom;
-    int score;
+    private String nom;
+    private int score;
 }
