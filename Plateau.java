@@ -1,41 +1,38 @@
-public class Plateau {
+public abstract class Plateau {
   private Case [][] plateau;
-  private int hauteur; // correspond à i
-  private int longueur; // correspond à j
+  protected int hauteur; // correspond à i
+  protected int longueur; // correspond à j
 
   public Plateau(int hauteur, int longueur){
-    this.hauteur = hauteur;
-    this.longueur = longueur;
-    this.plateau = new Case[hauteur][longueur];
-    for (int i = 0; i < hauteur; i++) {
-      for (int j = 0; j < longueur; j++) {
-        this.plateau[i][j] = new Case();
+      if (hauteur > 99) {
+          hauteur = 99;
       }
-    }
+      if (longueur > 99) {
+          longueur = 99;
+      }
+      this.hauteur = hauteur;
+      this.longueur = longueur;
   }
 
   public Plateau(int hauteur){
-    this(hauteur, hauteur);
+      this(hauteur, hauteur);
   }
 
   public Plateau(){
-    this(10);
+      this(10);
   }
 
   public Case getCase(int i, int j){
-    return plateau[i][j];
+      return plateau[i][j];
   }
 
-  public void afficher(){
-    /*
-    for (int i = 0; i < longueur; i++) {
-      System.out.print("-");
-    }
-    for (int i = 0; i < hauteur; i++) {
-      for (int j = 0; j < longueur; j++) {
-        
-      }
-    }
-    */
+  public void setCase(int i, int j, Case c){
+      this.plateau[i][j] = c;
   }
+
+  public void setPlateau(Case[][] plateau) {
+      this.plateau = plateau;
+  }
+
+  public abstract void afficher();
 }

@@ -6,12 +6,12 @@ public class Saboteur extends Jeu {
     }
 
     @Override
-    public void afficher() {
+    public void joueUnTour(Joueur j) {
 
     }
 
     @Override
-    public void joueUnTour(Joueur j) {
+    public void setJoueur() {
 
     }
 }

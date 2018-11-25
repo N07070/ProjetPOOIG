@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Joueur  {
+public class Joueur {
     private String nom;
     private int score;
 

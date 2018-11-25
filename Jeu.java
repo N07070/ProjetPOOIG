@@ -1,8 +1,8 @@
 public abstract class Jeu {
-    private Plateau plateau;
-    private Joueur [] participants;
+    protected Plateau plateau;
+    protected Joueur [] participants;  // Tableau des participants
 
     public abstract void lancerPartie();
-    public abstract void afficher();
     public abstract void joueUnTour(Joueur j);
+    public abstract void setJoueur();
 }
