@@ -5,13 +5,13 @@ public class Joueur {
     private int score;
 
     public Joueur(String nom){
-        // Constructeur basique.
+        // Constructeur basique
         this.nom = nom;
         this.score = 0;
     }
 
     public Joueur(){
-        // Constructeur avec Scanner.
+        // Constructeur avec Scanner
         Scanner sc = new Scanner(System.in);
         this.nom = sc.nextLine();
         this.score = 0;
