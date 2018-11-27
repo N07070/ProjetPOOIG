@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Domino extends Jeu {
     private ArrayList <PieceDomino> pieces;      // Toutes les pièces qui existent
     private ArrayList <PieceDomino> paquet [];   // Tableau comportant la pioche et les Dominos non-posés de chaque joeurs
-                                        //  -> Taille de paquet = Nombre de joueurs + 1 ([0] correspond à la pioche
+                                                 //  -> Taille de paquet = Nombre de joueurs + 1 ([0] correspond à la pioche
 
     @Override
     public void lancerPartie(){
