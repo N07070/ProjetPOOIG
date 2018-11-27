@@ -1,18 +1,15 @@
 public class CaseDomino extends Case {
-    int side;
+    int side;       // 0 ou 1
 
     public CaseDomino(){
         super();
         this.side = -1;
     }
 
-    public void PoserPiece(Piece p, int side){
+    public void PoserPiece(PieceDomino p, int side){
         super.PoserPiece(p);
         this.side = side;
     }
-
-    @Override
-    public void PoserPiece(Piece p) {}
 
     @Override
     public int getValeur() {

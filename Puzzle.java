@@ -26,6 +26,6 @@ public class Puzzle extends Jeu {
   @Override
   public void setJoueur() {
       System.out.println("Quel est le nom du joueur ?");
-      this.joueur = new Joueur();
+      this.joueur = new Joueur(0);
   }
 }

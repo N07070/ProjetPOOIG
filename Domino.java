@@ -4,9 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Domino extends Jeu {
-    ArrayList<PieceDomino> pieces;      // Toutes les pièces qui existent
-    ArrayList<PieceDomino> [] paquet;   // Tableau comportant la pioche et les Dominos non-posés de chaque joeurs
+    private ArrayList <PieceDomino> pieces;      // Toutes les pièces qui existent
+    private ArrayList <PieceDomino> paquet [];   // Tableau comportant la pioche et les Dominos non-posés de chaque joeurs
                                         //  -> Taille de paquet = Nombre de joueurs + 1 ([0] correspond à la pioche
+
     @Override
     public void lancerPartie(){
         System.out.println("-- Partie de Domino --" + "\n");
@@ -82,8 +83,35 @@ public class Domino extends Jeu {
         }
     }
 
-    public void placerDomino(PieceDomino p){
-        //
+    public boolean placerDomino(int i, int j, int dir, PieceDomino p){
+
+        // i, j : position dans le tableau
+        // dir : 0 = vers la droite
+        //       1 = vers le bas
+        //       2 = vers le gauche
+        //       3 = vers le haut
+
+        CaseDomino caseDomino1 = (CaseDomino) plateau.getCase(i, j);
+        CaseDomino caseDomino2;
+        switch (dir){
+            default: return false;
+            case 0: caseDomino2 = (CaseDomino)plateau.getCase(i,j + 1);
+                break;
+            case 1: caseDomino2 = (CaseDomino)plateau.getCase(i + 1, j);
+                break;
+            case 2: caseDomino2 = (CaseDomino)plateau.getCase(i, j - 1);
+                break;
+            case 3: caseDomino2 = (CaseDomino)plateau.getCase(i - 1, j + 1);
+        }
+        if (!(caseDomino1.estOccupee() && caseDomino2.estOccupee())){
+            int id = p.getProprio().getId();
+            caseDomino1.PoserPiece(p, 0);
+            caseDomino2.PoserPiece(p, 1);
+            paquet[id + 1].remove(p);
+            return true;
+        }
+        System.err.println("Vous ne pouvez pas placer de domino à cette position");
+        return false;
     }
 
     @Override
@@ -114,7 +142,7 @@ public class Domino extends Jeu {
         }
         for (int i = 0; i < participants.length; i++) {
             System.out.println("Quel est le nom du joueur n°" + (i+1) + " ?");
-            participants[i] = new Joueur();
+            participants[i] = new Joueur(i);
         }
     }
 }
