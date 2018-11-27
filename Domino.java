@@ -20,34 +20,11 @@ public class Domino extends Jeu {
 
         // Création des Dominos
         this.pieces = new ArrayList<>();
-        this.pieces.add(new PieceDomino(0, 0));
-        this.pieces.add(new PieceDomino(0, 1));
-        this.pieces.add(new PieceDomino(0, 2));
-        this.pieces.add(new PieceDomino(0, 3));
-        this.pieces.add(new PieceDomino(0, 4));
-        this.pieces.add(new PieceDomino(0, 5));
-        this.pieces.add(new PieceDomino(0, 6));
-        this.pieces.add(new PieceDomino(1, 1));
-        this.pieces.add(new PieceDomino(1, 2));
-        this.pieces.add(new PieceDomino(1, 3));
-        this.pieces.add(new PieceDomino(1, 4));
-        this.pieces.add(new PieceDomino(1, 5));
-        this.pieces.add(new PieceDomino(1, 6));
-        this.pieces.add(new PieceDomino(2, 2));
-        this.pieces.add(new PieceDomino(2, 3));
-        this.pieces.add(new PieceDomino(2, 4));
-        this.pieces.add(new PieceDomino(2, 5));
-        this.pieces.add(new PieceDomino(2, 6));
-        this.pieces.add(new PieceDomino(3, 3));
-        this.pieces.add(new PieceDomino(3, 4));
-        this.pieces.add(new PieceDomino(3, 5));
-        this.pieces.add(new PieceDomino(3, 6));
-        this.pieces.add(new PieceDomino(4, 4));
-        this.pieces.add(new PieceDomino(4, 5));
-        this.pieces.add(new PieceDomino(4, 6));
-        this.pieces.add(new PieceDomino(5, 5));
-        this.pieces.add(new PieceDomino(5, 6));
-        this.pieces.add(new PieceDomino(6, 6));
+        for (int i = 0; i < 7 ; i++ ) {
+            for (int j = 0; j < 7 ; j++ ) {
+                this.piece.add(new PieceDomino(i,j));
+            }
+        }
 
         // Distribution des Dominos
         this.paquet = new ArrayList[participants.length + 1];
